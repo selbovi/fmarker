@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore">
+  <ecore:EPackage name="OutTables" nsURI="http:///ru.croc.ctp.jxfw.ecore" nsPrefix="OutTables.xtend">
+    <eClassifiers xsi:type="ecore:EEnum" name="OutTableStateEnum">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eLiterals name="NOT_READY" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41d;&#x435; &#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43b;&#x430;&#x441;&#x44c;"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="IN_PROGRESS" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x424;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x443;&#x435;&#x442;&#x441;&#x44f;"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="READY" value="3">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x421;&#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x430;"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="ERROR" value="4">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x448;&#x438;&#x431;&#x43a;&#x430;"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="OutTableTypeEnum">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eLiterals name="MANDATORY" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x439;"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="WARNING" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x440;&#x435;&#x434;&#x443;&#x43f;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x439;"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ControlTypeEnum">
+      <eAnnotations source="http://www.croc.ru/ctp/model/enumType">
+        <details key="isFlags" value="false"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n"/>
+      <eLiterals name="REQUIRED" value="1">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x439;"/>
+        </eAnnotations>
+      </eLiterals>
+      <eLiterals name="WARNING" value="2">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x43f;&#x440;&#x435;&#x434;&#x443;&#x43f;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x439;"/>
+        </eAnnotations>
+      </eLiterals>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTableTemplate">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x428;&#x430;&#x431;&#x43b;&#x43e;&#x43d; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="processView" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x441;&#x441; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="routing" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x435;&#x445;&#x43a;&#x430;&#x440;&#x442;&#x430; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="department" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x41e;&#x413;&#x421;/&#x426;&#x410; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41d;&#x430;&#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTableTemplateMeta">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x428;&#x430;&#x431;&#x43b;&#x43e;&#x43d; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41d;&#x430;&#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="processId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43f;&#x440;&#x43e;&#x446;&#x435;&#x441;&#x441;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="development" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x435;&#x445;&#x43a;&#x430;&#x440;&#x442;&#x430; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x441;&#x432;&#x43e;&#x434;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operCode" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x43f;&#x435;&#x440; &#x43a;&#x43e;&#x434; &#x43f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44f;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="section" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x420;&#x430;&#x437;&#x440;&#x435;&#x437;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmlTemplate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x414; &#x444;&#x430;&#x439;&#x43b;&#x430; xml-&#x448;&#x430;&#x431;&#x43b;&#x43e;&#x43d;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="excelTemplate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x414; &#x444;&#x430;&#x439;&#x43b;&#x430; Excel-&#x448;&#x430;&#x431;&#x43b;&#x43e;&#x43d;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTable">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outTableTemplate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x428;&#x430;&#x431;&#x43b;&#x43e;&#x43d; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="processView" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x441;&#x441; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="routing" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x435;&#x445;&#x43a;&#x430;&#x440;&#x442;&#x430; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="department" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x41e;&#x413;&#x421;/&#x426;&#x410; - &#x438;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x441;&#x432;&#x43e;&#x434;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operCode" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43d;&#x44b;&#x439; &#x43a;&#x43e;&#x434;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="section" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x420;&#x430;&#x437;&#x440;&#x435;&#x437;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="xmlTemplate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x414; &#x444;&#x430;&#x439;&#x43b;&#x430; xml-&#x448;&#x430;&#x431;&#x43b;&#x43e;&#x43d;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="excelTemplate" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x414; &#x444;&#x430;&#x439;&#x43b;&#x430; Excel-&#x448;&#x430;&#x431;&#x43b;&#x43e;&#x43d;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="operation" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x414; &#x43f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x435;&#x439; &#x43e;&#x43f;&#x435;&#x440;&#x430;&#x446;&#x438;&#x438;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="/0/OutTableStateEnum" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x439; &#x441;&#x442;&#x430;&#x442;&#x443;&#x441;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="user" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;, &#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x432;&#x448;&#x438;&#x439; &#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="userFio" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x439; &#x43f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;, &#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x432;&#x448;&#x438;&#x439; &#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; - &#x424;&#x418;&#x41e;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="warnings" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x448;&#x438;&#x431;&#x43a;&#x438; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b; - &#x43f;&#x440;&#x435;&#x434;&#x443;&#x43f;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="errors" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x448;&#x438;&#x431;&#x43a;&#x438; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b; - &#x43e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x439; &#x43a;&#x43e;&#x43c;&#x43c;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTableHistory">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430; - &#x438;&#x441;&#x442;&#x43e;&#x440;&#x438;&#x44f; &#x437;&#x430;&#x43f;&#x443;&#x441;&#x43a;&#x430;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outTable" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="actual" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x440;&#x438;&#x437;&#x43d;&#x430;&#x43a; '&#x430;&#x43a;&#x442;&#x443;&#x430;&#x43b;&#x44c;&#x43d;&#x430;&#x44f;'"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="/0/OutTableStateEnum" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x421;&#x442;&#x430;&#x442;&#x443;&#x441;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="user" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;, &#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x432;&#x448;&#x438;&#x439; &#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="userFio" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41f;&#x43e;&#x43b;&#x44c;&#x437;&#x43e;&#x432;&#x430;&#x442;&#x435;&#x43b;&#x44c;, &#x437;&#x430;&#x43f;&#x443;&#x441;&#x442;&#x438;&#x432;&#x448;&#x438;&#x439; &#x444;&#x43e;&#x440;&#x43c;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; - &#x424;&#x418;&#x41e;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="warnings" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x448;&#x438;&#x431;&#x43a;&#x438; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b; - &#x43f;&#x440;&#x435;&#x434;&#x443;&#x43f;&#x440;&#x435;&#x434;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="errors" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x448;&#x438;&#x431;&#x43a;&#x438; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b; - &#x43e;&#x431;&#x44f;&#x437;&#x430;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="comment" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41a;&#x43e;&#x43c;&#x43c;&#x435;&#x43d;&#x442;&#x430;&#x440;&#x438;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableType" eType="/0/OutTableTypeEnum" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outDataId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x424;&#x430;&#x439;&#x43b; &#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="publishDataId" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x424;&#x430;&#x439;&#x43b; &#x43f;&#x443;&#x431;&#x43b;&#x438;&#x43a;&#x430;&#x446;&#x438;&#x43e;&#x43d;&#x43d;&#x43e;&#x439; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x44b;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateStart" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x414;&#x430;&#x442;&#x430; &#x437;&#x430;&#x43f;&#x443;&#x441;&#x43a;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="dateFinish" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x414;&#x430;&#x442;&#x430; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x44f; &#x440;&#x435;&#x437;&#x443;&#x43b;&#x44c;&#x442;&#x430;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTableControl">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430; - &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44c;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outTable" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlType" eType="/0/ControlTypeEnum" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44f;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okato" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x410;&#x422;&#x41e;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okpd" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x41f;&#x414;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okun" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x423;&#x41d;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okvedMain" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x412;&#x42d;&#x414; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x43e;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okvedAdditional" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x412;&#x42d;&#x414; &#x444;&#x430;&#x43a;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okfs" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x424;&#x421;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okopf" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x41e;&#x41f;&#x424;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kies" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41a;&#x418;&#x415;&#x421;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x410;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44f;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="OutTableCrossControl">
+      <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+        <details key="ru" value="&#x412;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430; - &#x43c;&#x435;&#x436;&#x442;&#x430;&#x431;&#x43b;&#x438;&#x447;&#x43d;&#x44b;&#x439; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44c;"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.croc.ru/ctp/model/objectProperties"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="objectId">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x418;&#x434;&#x435;&#x43d;&#x442;&#x438;&#x444;&#x438;&#x43a;&#x430;&#x442;&#x43e;&#x440; &#x43e;&#x431;&#x44a;&#x435;&#x43a;&#x442;&#x430;"/>
+        </eAnnotations>
+        <eAnnotations source="http://www.croc.ru/ctp/model/attributeProperties">
+          <details key="complexKeyOrder" value="1"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="outTable" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x432;&#x44b;&#x445;&#x43e;&#x434;&#x43d;&#x430;&#x44f; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="controlType" eType="/0/ControlTypeEnum" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44f;"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="aggregateType" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x422;&#x438;&#x43f; &#x441;&#x432;&#x43e;&#x434;&#x430;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okato" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x410;&#x422;&#x41e;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okpd" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x41f;&#x414;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okun" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x423;&#x41d;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okvedMain" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x412;&#x42d;&#x414; &#x43e;&#x441;&#x43d;&#x43e;&#x432;&#x43d;&#x43e;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okvedAdditional" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x412;&#x42d;&#x414; &#x444;&#x430;&#x43a;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438;&#x439;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okfs" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x424;&#x421;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="okopf" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41e;&#x41a;&#x41e;&#x41f;&#x424;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kies" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41a;&#x418;&#x415;&#x421;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="algorithm" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x410;&#x43b;&#x433;&#x43e;&#x440;&#x438;&#x442;&#x43c; &#x43a;&#x43e;&#x43d;&#x442;&#x440;&#x43e;&#x43b;&#x44f;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="tableNames" unsettable="true">
+        <eAnnotations source="http://www.croc.ru/ctp/model/i18n">
+          <details key="ru" value="&#x41d;&#x430;&#x438;&#x43c;&#x435;&#x43d;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x442;&#x430;&#x431;&#x43b;&#x438;&#x446;"/>
+        </eAnnotations>
+        <eType xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      </eStructuralFeatures>
+    </eClassifiers>
+  </ecore:EPackage>
+  <ecore:EDataType name="EZonedDateTime" instanceClassName="java.time.ZonedDateTime"/>
+  <ecore:EDataType name="EPeriod" instanceClassName="java.time.Period"/>
+  <ecore:EDataType name="EZonedDateTime" instanceClassName="java.time.ZonedDateTime"/>
+  <ecore:EDataType name="EPeriod" instanceClassName="java.time.Period"/>
+</xmi:XMI>
